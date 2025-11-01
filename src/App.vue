@@ -1,11 +1,13 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import DoubleButton from './components/doublebutton/DoubleButton.vue';
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+  <div>
+    <DoubleButton :firstButton="{ label: 'First' }" :secondButton="{ label: 'Second' }"
+      @first-click="() => console.log('First button clicked!')"
+      @second-click="() => console.log('Second button clicked!')" />
+  </div>
 </template>
 
 <style scoped></style>
